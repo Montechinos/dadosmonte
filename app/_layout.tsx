@@ -1,5 +1,15 @@
-import { Stack } from "expo-router";
+import { Stack } from 'expo-router';
 
 export default function RootLayout() {
-  return <Stack />;
+  return (
+    <Stack
+      screenOptions={{
+        headerShown: false,
+        contentStyle: { backgroundColor: '#0f172a' }
+      }}
+    >
+      <Stack.Screen name="index" />
+      <Stack.Screen name="games/dice" />
+    </Stack>
+  );
 }
